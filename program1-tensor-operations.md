@@ -30,8 +30,8 @@ broadcast = tensor_a + 5
 concat = tf.concat([t1, t2], axis=0)
 
 # Advanced operations
-max_values = tf.maximum(t1, tf.constant([[4, 3], [2, 1]]))
-min_values = tf.minimum(t1, tf.constant([[4, 3], [2, 1]]))
+max_values = tf.maximum(t1, t2)
+min_values = tf.minimum(t1, t2)
 abs_values = tf.abs(tf.constant([[-1, -2], [3, -4]]))
 log_vals = tf.math.log(tf.constant([[1., 2.], [3., 4.]]))
 exp_vals = tf.exp(tf.constant([[1., 2.], [3., 4.]]))
