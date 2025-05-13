@@ -4,11 +4,9 @@
 import tensorflow as tf
 import numpy as np
 
-# Core tensor operations
+# Create basic tensors
 a = tf.constant([10, 20, 30], dtype=tf.float32)
 b = tf.constant([5, 15, 25], dtype=tf.float32)
-
-# Create basic tensors
 t1 = tf.constant([[1, 2], [3, 4]])
 t2 = tf.constant([[5, 6], [7, 8]])
 tensor_a = tf.constant([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
@@ -24,17 +22,17 @@ div_result = tf.divide(a, b)
 safe_div = tf.where(b != 0, a / b, tf.zeros_like(a))
 
 # Tensor manipulation
-reshaped = tf.reshape(tf.range(4), (2, 2))
-squared = tf.square(tf.constant([-5, 2, 7], dtype=tf.float32))
+reshaped = tf.reshape(t1, (4,))
+squared = tf.square(a)
 broadcast = tensor_a + 5
 concat = tf.concat([t1, t2], axis=0)
 
 # Advanced operations
 max_values = tf.maximum(t1, t2)
 min_values = tf.minimum(t1, t2)
-abs_values = tf.abs(tf.constant([[-1, -2], [3, -4]]))
-log_vals = tf.math.log(tf.constant([[1., 2.], [3., 4.]]))
-exp_vals = tf.exp(tf.constant([[1., 2.], [3., 4.]]))
+abs_values = tf.abs(t1 - t2)
+log_vals = tf.math.log(tf.cast(t1, tf.float32))
+exp_vals = tf.exp(tf.cast(t1, tf.float32))
 
 # Print results
 print("Add:", add_result.numpy())
