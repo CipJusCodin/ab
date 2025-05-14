@@ -1,5 +1,4 @@
-# Program 2: CNN for CIFAR-10
-
+# Laboratory Task 2: Build a simple Sequential CNN model for classifying CIFAR-10/ MNIST dataset 
 ```python
 import tensorflow as tf
 
