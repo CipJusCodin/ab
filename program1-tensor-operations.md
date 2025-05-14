@@ -1,4 +1,4 @@
-# Program 1: Basic Tensor Operations
+# Laboratory Task 1: Perform basic tensor operations (like addition, multiplication) using Tensor Flow. 
 
 ```python
 import tensorflow as tf
