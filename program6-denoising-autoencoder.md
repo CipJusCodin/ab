@@ -1,4 +1,4 @@
-# Program 6: Denoising Autoencoder
+# Laboratory Task 6: Create a denoising autoencoder to remove noise from images.
 
 ```python
 import tensorflow as tf
