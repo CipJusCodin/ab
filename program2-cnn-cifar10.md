@@ -21,7 +21,7 @@ model = tf.keras.Sequential([
 
 # Compile and train
 model.compile(loss="sparse_categorical_crossentropy", optimizer="nadam", metrics=["accuracy"])
-model.fit(X_train, y_train, epochs=20)          # increased epochs, removed batch_size, validation_split not needed
+model.fit(X_train, y_train, epochs=20)          # increased epochs, removed batch_size and validation_split not needed
 
 # Evaluate and save
 print("Loss, accuracy:", model.evaluate(X_test, y_test))    #simplified print function
