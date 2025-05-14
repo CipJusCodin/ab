@@ -33,8 +33,7 @@ for name, opt in optimizers.items():
     # Train model
     model = create_model()
     model.compile(loss='mse', optimizer=opt, metrics=['accuracy'])
-    hist = model.fit(X_train, y_train, epochs=50, batch_size=128, 
-                    validation_split=0.2, verbose=0)
+    hist = model.fit(X_train, y_train, epochs=50, batch_size=128, validation_split=0.2, verbose=0)
     
     # Evaluate
     _, acc = model.evaluate(X_test, y_test, verbose=0)
