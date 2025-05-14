@@ -31,8 +31,8 @@ concat = tf.concat([t1, t2], axis=0)
 max_values = tf.maximum(t1, t2)
 min_values = tf.minimum(t1, t2)
 abs_values = tf.abs(t1 - t2)
-log_vals = tf.math.log(tf.cast(t1, tf.float32))
-exp_vals = tf.exp(tf.cast(t1, tf.float32))
+log_vals = tf.math.log(a)
+exp_vals = tf.exp(b)
 
 # Print results
 print("Add:", add_result.numpy())
