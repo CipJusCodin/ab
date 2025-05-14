@@ -1,4 +1,4 @@
-# Program 8: LSTM for Text Generation
+# Laboratory Task 8: Build an LSTM-based model for time-series forecasting or text generation.
 
 ```python
 import tensorflow as tf
