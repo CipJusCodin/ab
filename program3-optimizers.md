@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 data = pd.read_csv('Data/winequality-red.csv', sep=';')
 X = data.drop(['quality'], axis=1)
 y = data['quality']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=2017)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Create model function
 def create_model():
