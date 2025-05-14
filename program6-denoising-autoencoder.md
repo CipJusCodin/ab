@@ -45,7 +45,7 @@ fig, axes = plt.subplots(2, 10, figsize=(20, 4))
 for i in range(10):
     axes[0, i].imshow(X_test_noisy[i].reshape(28, 28), cmap='gray')
     axes[0, i].axis('off')
-    axes[1, i].imshow(denoised_images[i].reshape(28, 28), cmap='gray')
+    axes[1, i].imshow(imgs[i].reshape(28, 28), cmap='gray')
     axes[1, i].axis('off')
     
 plt.show()
