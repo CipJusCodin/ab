@@ -20,9 +20,9 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(1)
 ])
 model.compile(optimizer='adam', loss='mse')
-model.fit(X, y, epochs=50, verbose=0)
+model.fit(X, y, epochs=50, verbose=1)
 
 # Print sample predictions
-print("Expected:", y[:3])
-print("Predicted:", model.predict(X[:3]).flatten())
+print("Expected:", y[:5])
+print("Predicted:", model.predict(X[:5]).flatten())
 ```
