@@ -13,10 +13,10 @@ tensor_a = tf.constant([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 tensor_b = tf.constant([[9, 8, 7], [6, 5, 4], [3, 2, 1]])
 
 # Basic operations
-add_result = a + b
-sub_result = a - b
-mul_result = tf.multiply(tensor_a, tensor_b)
-div_result = tf.divide(a, b)
+add = a + b
+sub = a - b
+mul = tf.multiply(tensor_a, tensor_b)
+div = tf.divide(a, b)
 
 # Safe division
 safe_div = tf.where(b != 0, a / b, tf.zeros_like(a))
@@ -28,24 +28,24 @@ broadcast = tensor_a + 5
 concat = tf.concat([t1, t2], axis=0)
 
 # Advanced operations
-max_values = tf.maximum(t1, t2)
-min_values = tf.minimum(t1, t2)
-abs_values = tf.abs(t1 - t2)
-log_vals = tf.math.log(a)
-exp_vals = tf.exp(b)
+max = tf.maximum(t1, t2)
+min = tf.minimum(t1, t2)
+abs = tf.abs(t1 - t2)
+log = tf.math.log(a)
+exp = tf.exp(b)
 
 # Print results
-print("Add:", add_result.numpy())
-print("Subtract:", sub_result.numpy())
-print("Multiply:", mul_result.numpy())
-print("Safe Division:", safe_div.numpy())
+print("Add:", add.numpy())
+print("Subtract:", sub.numpy())
+print("Multiply:", mul.numpy())
+print("Safe Division:", safe.numpy())
 print("Reshape:", reshaped.numpy())
 print("Square:", squared.numpy())
 print("Broadcast:", broadcast.numpy())
 print("Concat:", concat.numpy())
-print("Max:", max_values.numpy())
-print("Min:", min_values.numpy())
-print("Abs:", abs_values.numpy())
-print("Log:", log_vals.numpy())
-print("Exp:", exp_vals.numpy())
+print("Max:", max.numpy())
+print("Min:", min.numpy())
+print("Abs:", abs.numpy())
+print("Log:", log.numpy())
+print("Exp:", exp.numpy())
 ```
