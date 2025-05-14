@@ -43,10 +43,7 @@ autoencoder = tf.keras.Sequential([
 autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
 
 # Train model
-autoencoder.fit(X_train_noisy, X_train, 
-                epochs=10, 
-                batch_size=128,
-                validation_data=(X_test_noisy, X_test))
+autoencoder.fit(X_train_noisy, X_train, epochs=10, batch_size=128, validation_data=(X_test_noisy, X_test))
 
 # Generate denoised images
 denoised_images = autoencoder.predict(X_test_noisy[:10])
