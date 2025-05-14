@@ -1,4 +1,4 @@
-# Program 3: Optimizer Comparison
+# Laboratory Task 3: Experiment with different optimizers (e.g., Adam vs. RMSProp) and compare their impact on accuracy and convergence.
 
 ```python
 import tensorflow as tf
