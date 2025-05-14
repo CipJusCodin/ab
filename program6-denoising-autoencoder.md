@@ -23,7 +23,7 @@ X_train_noisy = X_train_noisy.reshape(-1, 28, 28, 1)
 X_test_noisy = X_test_noisy.reshape(-1, 28, 28, 1)
 
 # Build autoencoder model
-autoencoder = tf.keras.Sequential([
+model = tf.keras.Sequential([
     # Encoder
     tf.keras.layers.Conv2D(32, (3, 3), strides=2, padding='same', activation='relu', input_shape=(28, 28, 1)),
     tf.keras.layers.Conv2D(16, (3, 3), strides=2, padding='same', activation='relu'),
@@ -35,11 +35,11 @@ autoencoder = tf.keras.Sequential([
 ])
 
 # Compile and train model
-autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
-autoencoder.fit(X_train_noisy, X_train, epochs=5, batch_size=128, validation_data=(X_test_noisy, X_test))
+model.compile(optimizer='adam', loss='binary_crossentropy')
+model.fit(X_train_noisy, X_train, epochs=5, batch_size=128, validation_data=(X_test_noisy, X_test))
 
 # Generate denoised images
-denoised_images = autoencoder.predict(X_test_noisy[:10])
+denoised_images = model.predict(X_test_noisy[:10])
 
 fig, axes = plt.subplots(2, 10, figsize=(20, 4))
 for i in range(10):
